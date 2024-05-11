@@ -1,10 +1,12 @@
 import React from 'react'
-import { LocationPin } from './LocationPin'
+import { LocationPin, PinPerspective } from './LocationPin'
 import image from '@/assets/loaction.jpg'
 import Image from 'next/image'
+import { BiDirections } from 'react-icons/bi'
+import { GiDirectionSign } from 'react-icons/gi'
 const Contact = () => {
   return (
-    <section className="bg-white/90 w-full mx-auto">
+    <section className="bg-white/90 w-full mx-auto ">
   <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
     <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 ">
       Contact Us
@@ -61,18 +63,19 @@ const Contact = () => {
       </div>
       <button
         type="submit"
-        className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 "
+        className="py-3 px-5 text-base font-medium text-center bg-black/70 text-white  rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 "
       >
         Send message
       </button>
     </form>
   </div>
-
-  <div>
-    <LocationPin>
-        <Image src={image} width={150} height={150} alt='location' className='w-full h-full'/>
+  <div className='mx-auto bg-white w-full pb-12 pt-4'>
+    <h1 className='text-center text-3xl font-bold pb-4 pt-2'> Location</h1>
+    <LocationPin title='Shive Waki Tarfhe Wada Karanjvihire near Bhama Askhed Dam,Maharashtra 410507' href='https://g.co/kgs/33yU4Qd'>
+        <Image src={image} width={500} height={500} alt='location' className=' w-56 h-56 rounded-lg' />
+        <a href="https://g.co/kgs/33yU4Qd" target='_blank' className='text-center mx-auto text-blue-500 flex justify-between'><GiDirectionSign/> Get Direction  </a>
     </LocationPin>
-  </div>
+     </div>
 </section>
 
   )

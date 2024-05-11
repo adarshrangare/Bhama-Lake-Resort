@@ -3,6 +3,7 @@ import { WobbleCard } from './WobbleCard'
 import { SlideShow } from './SlideShow'
 import { Card } from '../Facilities/Cards'
 import { Carousel } from 'antd';
+import Image from 'next/image';
 const Gallary = () => {
 
   const images = [
@@ -32,8 +33,8 @@ const Gallary = () => {
         <div className=' w-full lg:hidden'>
           <Carousel autoplay className='inline-block overflow-hidden '>
           {images.map((item,index)=>(
-            <WobbleCard image={item} className='w-full h-full shrink-0  ' >
-              <img src={item} alt="" className='w-full h-full  ' />
+            <WobbleCard image={item} className='w-full h-full shrink-0  ' key={index} >
+              <Image width={300} height={300} src={item} alt={item} className='w-full h-full  '  />
             </WobbleCard>
           
           ))}
@@ -41,8 +42,8 @@ const Gallary = () => {
           <br />
           <Carousel autoplay className='inline-block overflow-hidden '>
           {images.reverse().map((item,index)=>(
-            <WobbleCard image={item} className='w-full h-full shrink-0  ' >
-              <img src={item} alt="" className='w-full h-full  ' />
+            <WobbleCard image={item} className='w-full h-full shrink-0  ' key={index} >
+              <Image width={300} height={300} src={item} alt={item} className='w-full h-full  '  />
             </WobbleCard>
           
           ))}
@@ -57,8 +58,8 @@ const Gallary = () => {
         '>
         
           {images.map((item,index)=>(
-            <WobbleCard image={item} className='w-full h-full shrink-0 max-md:w-48 min-h-48' >
-              <img src={item} alt="" className='w-full h-full scale-125 ' />
+            <WobbleCard image={item} className='w-full h-full shrink-0 max-md:w-48 min-h-48' key={index} >
+              <Image width={300} height={300} src={item} alt={item} className='w-full h-full scale-125 '  />
             </WobbleCard>
           
           ))}
