@@ -4,6 +4,7 @@ import Footer from "./Footer/Footer";
 import Gallary from "./Gallary/Gallary";
 import Header from "./Header/Header";
 import Hero from "./Hero/Hero";
+import SecondaryHero from "./SecondaryHero/SecondaryHero";
 
 
-export { Facilities, Gallary, Footer, Header, Hero,Contact };
+export { Facilities, Gallary, Footer, Header, Hero,Contact,SecondaryHero };

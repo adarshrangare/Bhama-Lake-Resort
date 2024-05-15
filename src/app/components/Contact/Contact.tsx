@@ -70,11 +70,12 @@ const Contact = () => {
     </form>
   </div>
   <div className='mx-auto bg-white w-full pb-12 pt-4'>
-    <h1 className='text-center text-3xl font-bold pb-4 pt-2'> Location</h1>
+    <h1 className='text-center text-4xl text-slate-800 font-bold pb-4 pt-2'> Location</h1>
+    <p className='w-8/12 text-center mx-auto pb-2'>Our resort is located in the heart of the beautiful Bhama lake Resort area, surrounded by stunning natural scenery and a variety of outdoor activities. Whether you&apos;re looking to relax in the peaceful setting or explore the great outdoors, our location is perfect for you.</p>
     <LocationPin title='Shive Waki Tarfhe Wada Karanjvihire near Bhama Askhed Dam,Maharashtra 410507' href='https://g.co/kgs/33yU4Qd'>
         <Image src={image} width={500} height={500} alt='location' className=' w-56 h-56 rounded-lg' />
-        <a href="https://g.co/kgs/33yU4Qd" target='_blank' className='text-center mx-auto text-blue-500 flex justify-between'><GiDirectionSign/> Get Direction  </a>
     </LocationPin>
+        <a href="https://g.co/kgs/33yU4Qd" target='_blank' className='text-center mx-auto w-48 px-4 py-2 items-center font-semibold hover:bg-blue-600 transition-all rounded-full bg-blue-500 text-white  flex justify-between'><GiDirectionSign/> Get Direction  </a>
      </div>
 </section>
 

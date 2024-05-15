@@ -4,6 +4,7 @@ import { SlideShow } from './SlideShow'
 import { Card } from '../Facilities/Cards'
 import { Carousel } from 'antd';
 import Image from 'next/image';
+import GallaryFlow from './GallaryFlow';
 const Gallary = () => {
 
   const images = [
@@ -19,18 +20,25 @@ const Gallary = () => {
   ]
 
   return (
-    <div className='bg-white relative'>
+    <div className='bg-white relative min-h-[100vh] h-fit'>
         
-      <SlideShow className='md:h-[120vh] h-screen' images={images}>
+      <SlideShow className=' min-h-[130vh] md:min-h-[150vh] h-fit' images={images}>
 
         <div></div>
 
       </SlideShow>
 
-      <div className='absolute  top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-20 w-full '>
-        <h1 className='text-center font-bold text-3xl md:text-6xl -translate-y-8 text-white'>Resort Gallary</h1>
+      <div className='absolute top-24 z-10 w-full '>
+        <h1 className='text-center font-bold text-4xl md:text-6xl -translate-y-8 text-white'>Resort Gallary</h1>
 
-        <div className=' w-full lg:hidden'>
+        <div className=' px-8'>
+        <GallaryFlow />
+
+            
+
+        </div>
+
+        {/* <div className=' w-full lg:hidden'>
           <Carousel autoplay className='inline-block overflow-hidden '>
           {images.map((item,index)=>(
             <WobbleCard image={item} className='w-full h-full shrink-0  ' key={index} >
@@ -49,10 +57,10 @@ const Gallary = () => {
           ))}
           </Carousel>
           
-        </div>
+        </div> */}
 
 
-        <div className=' 
+        {/* <div className=' 
           grid lg:grid-cols-4 grid-rows-2 gap-x-4 gap-y-4 w-10/12 md:p-8 mx-auto
            max-lg:hidden
         '>
@@ -63,7 +71,11 @@ const Gallary = () => {
             </WobbleCard>
           
           ))}
-        </div>
+        </div> */}
+
+        
+
+
       </div>
         
     </div>

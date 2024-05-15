@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { cn } from "@/utils/cn"
+import { cn } from "@/utils/cn";
 
 export const Card = ({
   imageUrl,
@@ -24,8 +24,7 @@ export const Card = ({
     "top" | "bottom" | "left" | "right" | string
   >("left");
 
-  const [clicked, setClicked] = useState(false);
-
+  const [clicked, setClicked] = useState(true);
 
   const handleMouseEnter = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
@@ -69,7 +68,7 @@ export const Card = ({
       onMouseEnter={handleMouseEnter}
       ref={ref}
       className={cn(
-        "md:h-96 w-52 h-52 md:w-96 bg-transparent rounded-lg overflow-hidden group/card relative",
+        "md:h-72 w-52 h-52 md:w-72 bg-transparent rounded-lg overflow-hidden group/card relative shrink-0",
         className
       )}
     >
@@ -79,8 +78,8 @@ export const Card = ({
           initial="initial"
           whileHover={direction}
           exit="exit"
-          onClick={()=>{
-            setClicked(prev=>!prev)
+          onClick={() => {
+            setClicked((prev) => !prev);
           }}
         >
           <motion.div className="group-hover/card:block hidden absolute inset-0 w-full h-full bg-black/40 z-10 transition duration-500" />
@@ -117,16 +116,17 @@ export const Card = ({
             {children}
           </motion.div>
 
-          { <div
-           
-            className={cn(
-              "md:hidden text-white absolute bottom-4 left-4 z-40 translate-x-0 transition-all",
-              childrenClassName, {"translate-x-full" : !clicked}
-            )}
-          >
-            {children}
-          </div>}
-          
+          {
+            <div
+              className={cn(
+                "md:hidden text-white absolute bottom-4 left-4 z-40 translate-x-0 transition-all bg-black/40 p-2 rounded-l-lg",
+                childrenClassName,
+                { "translate-x-full": !clicked }
+              )}
+            >
+              {children}
+            </div>
+          }
         </motion.div>
       </AnimatePresence>
     </motion.div>

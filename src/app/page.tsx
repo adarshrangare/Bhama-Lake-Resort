@@ -1,4 +1,4 @@
-import { Facilities, Gallary, Footer, Header, Hero, Contact } from "./components";
+import { Facilities, Gallary, Footer, Header, Hero, Contact, SecondaryHero } from "./components";
 
 
 export default function Home() {
@@ -7,6 +7,7 @@ export default function Home() {
     {/* // <div className="container mx-auto"> */}
       <Header/>
       <Hero/>
+      <SecondaryHero/>
       <Facilities/>
       <Gallary/>
       <Contact/>

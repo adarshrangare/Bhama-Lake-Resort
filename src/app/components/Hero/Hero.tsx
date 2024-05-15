@@ -5,7 +5,7 @@ import Title from "./Title";
 const Hero = () => {
   return (
     <>
-      <main className="fixed top-0 min-h-screen  overflow-hidden mainHero mx-auto bg-red-50 w-full -z-10 ">
+      <main className="fixed top-0 min-h-screen  overflow-hidden mainHero mx-auto  w-full -z-10 ">
         <video
           className="w-full h-full min-h-screen max-w-screen object-cover mx-auto"
           width="1920"
